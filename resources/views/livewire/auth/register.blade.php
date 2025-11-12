@@ -39,6 +39,7 @@ new #[Layout('components.layouts.auth')] class extends Component {
         $validated['membership_paid'] = false;
         $validated['is_active'] = false;
         $validated['role'] = 'member';
+        $validated['email_verified_at'] = now();
 
         event(new Registered(($user = User::create($validated))));
 
