@@ -1,42 +1,55 @@
-<div class="container-xxl">
-  <div class="authentication-wrapper authentication-basic container-p-y">
-    <div class="authentication-inner">
-      <!-- Login -->
-      <div class="card px-sm-6 px-0">
-        <div class="card-body">
-          <!-- Logo -->
-          <div class="app-brand justify-content-center">
-            <a href="index.html" class="app-brand-link gap-2"><x-app-logo /></a>
-          </div>
-          <!-- /Logo -->
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="layout-menu-fixed" data-base-url="{{url('/')}}" data-framework="laravel">
+  <head>
+    @include('partials.head')
+  </head>
 
-          <!-- Content -->
-          {{ $slot }}
-          <!-- /Content -->
+  <body>
+    <div class="container-xxl">
+      <div class="authentication-wrapper authentication-basic container-p-y">
+        <div class="authentication-inner">
+          <!-- Login -->
+          <div class="card px-sm-6 px-0">
+            <div class="card-body">
+              <!-- Logo -->
+              <div class="app-brand justify-content-center">
+                <a href="{{ url('/') }}" class="app-brand-link gap-2"><x-app-logo /></a>
+              </div>
+              <!-- /Logo -->
 
-          <div class="divider my-6">
-            <div class="divider-text">or</div>
-          </div>
+              <!-- Content -->
+              {{ $slot }}
+              <!-- /Content -->
 
-          <div class="d-flex justify-content-center">
-            <a href="javascript:;" class="btn btn-sm btn-icon rounded-circle btn-text-facebook me-1_5">
-              <i class="icon-base bx bxl-facebook-circle icon-20px"></i>
-            </a>
+              <div class="divider my-6">
+                <div class="divider-text">or</div>
+              </div>
 
-            <a href="javascript:;" class="btn btn-sm btn-icon rounded-circle btn-text-twitter me-1_5">
-              <i class="icon-base bx bxl-twitter icon-20px"></i>
-            </a>
+              <div class="d-flex justify-content-center">
+                <a href="javascript:;" class="btn btn-sm btn-icon rounded-circle btn-text-facebook me-1_5">
+                  <i class="icon-base bx bxl-facebook-circle icon-20px"></i>
+                </a>
 
-            <a href="javascript:;" class="btn btn-sm btn-icon rounded-circle btn-text-github me-1_5">
-              <i class="icon-base bx bxl-github icon-20px"></i>
-            </a>
+                <a href="javascript:;" class="btn btn-sm btn-icon rounded-circle btn-text-twitter me-1_5">
+                  <i class="icon-base bx bxl-twitter icon-20px"></i>
+                </a>
 
-            <a href="javascript:;" class="btn btn-sm btn-icon rounded-circle btn-text-google-plus">
-              <i class="icon-base bx bxl-google icon-20px"></i>
-            </a>
+                <a href="javascript:;" class="btn btn-sm btn-icon rounded-circle btn-text-github me-1_5">
+                  <i class="icon-base bx bxl-github icon-20px"></i>
+                </a>
+
+                <a href="javascript:;" class="btn btn-sm btn-icon rounded-circle btn-text-google-plus">
+                  <i class="icon-base bx bxl-google icon-20px"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+
+    <!-- Include Scripts -->
+    @include('partials.scripts')
+    <!-- / Include Scripts -->
+  </body>
+</html>
