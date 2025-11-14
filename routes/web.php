@@ -33,7 +33,7 @@ Route::view('connect/employer-dashboard', 'pages.connect.employer')->name('conne
 Route::view('resources/enquiries', 'pages.resources.enquiries')->name('resources.enquiries');
 Route::view('resources/downloads', 'pages.resources.downloads')->name('resources.downloads');
 Route::view('resources/partners-affiliates', 'pages.resources.partners')->name('resources.partners');
-Route::view('contact', 'pages.resources.contact')->name('contact');
+Route::view('resources/contact', 'pages.resources.contact')->name('resources.contact');
 
 Route::view('dashboard', 'dashboard')
   ->middleware(['auth', 'verified'])
