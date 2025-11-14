@@ -34,5 +34,5 @@ $width = $width ?? '25';
       </g>
     </g>
   </svg> -->
-  <img src="{{ asset('images/illustration/gsk.jpeg') }}" alt="{{ config('app.name') }} Logo" width="{{ $width }}">
+  <img src="{{ asset('assets/img/illustration/gsk.jpeg') }}" alt="{{ config('app.name') }} Logo" width="{{ $width }}">
 </span>
