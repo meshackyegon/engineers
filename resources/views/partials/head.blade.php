@@ -25,7 +25,15 @@
 <meta property="og:site_name" content="{{ config('variables.creatorName') ? config('variables.creatorName') : '' }}" />
 <link rel="canonical" href="{{ config('variables.productPage') ? config('variables.productPage') : '' }}">
 <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon/favicon.ico') }}" />
+@php
+  $gskFavicon = 'assets/img/illustrations/gsk.jpeg';
+@endphp
+@if (file_exists(public_path($gskFavicon)))
+  <link rel="icon" type="image/jpeg" href="{{ asset($gskFavicon) }}" />
+  <link rel="apple-touch-icon" href="{{ asset($gskFavicon) }}">
+@else
+  <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon/favicon.ico') }}" />
+@endif
 
 
 <!-- Include Styles -->

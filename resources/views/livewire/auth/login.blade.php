@@ -81,82 +81,85 @@ new #[Layout('components.layouts.auth')] class extends Component {
 ])
 @endsection
 
-<div>
-    <x-auth-header :title="__('Welcome to :app!', ['app' => config('app.name')])" :description="__('Enter your email and password below to log in')" />
+<div class="container">
+    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow-sm">
+                <div class="card-body p-5">
+                    <div class="text-center mb-4">
+                        <img src="{{ asset('assets/img/illustrations/gsk.jpeg') }}" alt="GSK" class="rounded-circle" style="width:72px;height:72px;object-fit:cover;" onerror="this.style.display='none'">
+                    </div>
 
-    <!-- Session Status -->
-    @if (session('status'))
-        <div class="alert alert-info mb-4">
-            {{ session('status') }}
-        </div>
-    @endif
+                    <h4 class="text-center mb-1">{{ __('Welcome to :app', ['app' => config('app.name')]) }}</h4>
+                    <p class="text-center text-muted mb-4">{{ __('Please sign in to your account and start the adventure') }}</p>
 
-    <form wire:submit="login" class="mb-6">
-        <div class="mb-6">
-            <label for="email" class="form-label">{{ __('Email or Username') }}</label>
-            <input
-                wire:model="email"
-                type="email"
-                class="form-control @error('email') is-invalid @enderror"
-                id="email"
-                required
-                autofocus
-                autocomplete="email"
-                placeholder="{{ __('Enter your email') }}"
-            >
-            @error('email')
-                <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-        </div>
+                    <!-- Session Status -->
+                    @if (session('status'))
+                        <div class="alert alert-info mb-3">
+                            {{ session('status') }}
+                        </div>
+                    @endif
 
-        <div class="mb-6 form-password-toggle">
-            <div class="d-flex justify-content-between">
-                <label for="password" class="form-label">{{ __('Password') }}</label>
-                @if (Route::has('password.request'))
-                    <a href="{{ route('password.request') }}" wire:navigate>
-                        <span>{{ __('Forgot Password?') }}</span>
-                    </a>
-                @endif
-            </div>
-            <div class="input-group input-group-merge">
-                <input
-                    wire:model="password"
-                    type="password"
-                    class="form-control @error('password') is-invalid @enderror"
-                    id="password"
-                    required
-                    autocomplete="current-password"
-                    placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                >
-                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-                @error('password')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
-            </div>
-        </div>
+                    <form wire:submit="login">
+                        <div class="mb-3">
+                            <label for="email" class="form-label text-uppercase small text-muted">{{ __('Email') }}</label>
+                            <input
+                                wire:model="email"
+                                type="email"
+                                class="form-control @error('email') is-invalid @enderror"
+                                id="email"
+                                required
+                                autofocus
+                                autocomplete="email"
+                                placeholder="{{ __('Enter your email or username') }}"
+                            >
+                            @error('email')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
 
-        <div class="mb-8">
-            <div class="d-flex justify-content-between mt-8">
-                <div class="form-check mb-0 ms-2">
-                    <input wire:model="remember" type="checkbox" class="form-check-input" id="remember">
-                    <label class="form-check-label" for="remember">
-                        {{ __('Remember Me') }}
-                    </label>
+                        <div class="mb-3 form-password-toggle">
+                            <label for="password" class="form-label text-uppercase small text-muted">{{ __('Password') }}</label>
+                            <div class="input-group input-group-merge">
+                                <input
+                                    wire:model="password"
+                                    type="password"
+                                    class="form-control @error('password') is-invalid @enderror"
+                                    id="password"
+                                    required
+                                    autocomplete="current-password"
+                                    placeholder="{{ __('Enter your password') }}"
+                                >
+                                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                                @error('password')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="form-check">
+                                <input wire:model="remember" type="checkbox" class="form-check-input" id="remember">
+                                <label class="form-check-label" for="remember">{{ __('Remember Me') }}</label>
+                            </div>
+                            @if (Route::has('password.request'))
+                                <a href="{{ route('password.request') }}" wire:navigate class="small">{{ __('Forgot Password?') }}</a>
+                            @endif
+                        </div>
+
+                        <div class="d-grid mb-3">
+                            <button type="submit" class="btn btn-primary">{{ __('Sign in') }}</button>
+                        </div>
+                    </form>
+
+                    @if (Route::has('register'))
+                        <p class="text-center small text-muted mb-0">
+                            <span>{{ __('New on our platform?') }}</span>
+                            <a href="{{ route('register') }}" wire:navigate>{{ __('Create an account') }}</a>
+                        </p>
+                    @endif
                 </div>
             </div>
         </div>
-
-        <div class="mb-6">
-            <button type="submit" class="btn btn-primary d-grid w-100">{{ __('Login') }}</button>
-        </div>
-    </form>
-
-    @if (Route::has('register'))
-        <p class="text-center">
-            <span>{{ __('New on our platform?') }}</span>
-            <a href="{{ route('register') }}" wire:navigate>
-                <span>{{ __('Create an account') }}</span>
-            </a>
-        </p>
-    @endif
+    </div>
 </div>

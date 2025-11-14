@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Simple, neutral GSK text logo placeholder SVG (use your official logo file in production) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="80" viewBox="0 0 320 80" preserveAspectRatio="xMidYMid meet">
+  <rect width="100%" height="100%" fill="none"/>
+  <g fill="#0b3d91" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    <text x="16" y="52" font-size="46">GSK</text>
+  </g>
+  <g transform="translate(210,16)">
+    <rect x="0" y="0" width="98" height="48" rx="6" fill="#0b3d91" opacity="0.08" />
+    <text x="8" y="34" font-size="14" fill="#0b3d91" font-family="Arial, Helvetica, sans-serif">Engineers' Hub</text>
+  </g>
+</svg>

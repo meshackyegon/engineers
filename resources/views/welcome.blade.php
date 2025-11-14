@@ -19,7 +19,7 @@
     <header class="py-3 bg-white shadow-sm">
       <div class="container-xxl d-flex align-items-center justify-content-between">
         <a class="d-flex align-items-center text-decoration-none" href="{{ url('/') }}">
-          <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" style="height:40px;object-fit:contain;" onerror="this.style.display='none'">
+          <img src="{{ asset('assets/img/illustrations/gsk.jpeg') }}" alt="GSK Logo" style="height:40px;object-fit:contain;" onerror="this.style.display='none'">
           <div class="ms-2">
             <h1 class="h5 mb-0 text-primary">Engineers' Hub</h1>
             <small class="text-muted">Advancing engineering practice together</small>
