@@ -7,7 +7,7 @@
           <!-- Logo -->
           <a href="{{url('/')}}" class="app-brand auth-cover-brand gap-2"><x-app-logo /></a>
           <!-- /Logo -->
-          <img src="{{asset('assets/img/illustrations/boy-with-rocket-light.png')}}" class="img-fluid" alt="Login image" width="700"/>
+          <img src="{{asset('assets/img/illustrations/gsk.jpeg')}}" class="img-fluid" alt="Login image" width="700"/>
         </div>
       </div>
     </div>
