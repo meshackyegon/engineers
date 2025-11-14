@@ -11,7 +11,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
 use Livewire\Volt\Component;
 
-new #[Layout('components.layouts.auth.card')] class extends Component {
+new #[Layout('components.layouts.auth.card_layout')] class extends Component {
     #[Validate('required|string|email')]
     public string $email = '';
 
