@@ -1,10 +1,11 @@
-@extends('components.layouts.app')
+<x-layouts.public>
 
-@section('title','Gallery')
 
-@section('content')
+
+
 <div class="container-xxl py-5">
   <h1>Gallery</h1>
   <p class="text-muted">Photos from events, site visits and member activities.</p>
 </div>
-@endsection
+<x-footer />\n</x-layouts.public>
+

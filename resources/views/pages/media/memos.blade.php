@@ -1,10 +1,11 @@
-@extends('components.layouts.app')
+<x-layouts.public>
 
-@section('title','Memos')
 
-@section('content')
+
+
 <div class="container-xxl py-5">
   <h1>Memos</h1>
   <p class="text-muted">Official memos and circulars from the Secretariat and Council.</p>
 </div>
-@endsection
+<x-footer />\n</x-layouts.public>
+

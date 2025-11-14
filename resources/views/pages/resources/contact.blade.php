@@ -1,8 +1,8 @@
-@extends('components.layouts.app')
+<x-layouts.public>
 
-@section('title','Contact Us')
 
-@section('content')
+
+
 <div class="container-xxl py-5" id="contact">
   <h1>Contact Us</h1>
   <p class="text-muted">Reach out to the Secretariat for membership, events, or procurement assistance.</p>
@@ -11,4 +11,5 @@
     <li><strong>Phone:</strong> +254 700 000000</li>
   </ul>
 </div>
-@endsection
+<x-footer />\n</x-layouts.public>
+
