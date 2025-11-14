@@ -7,6 +7,7 @@
   </g>
   <g transform="translate(210,16)">
     <rect x="0" y="0" width="98" height="48" rx="6" fill="#0b3d91" opacity="0.08" />
-    <text x="8" y="34" font-size="14" fill="#0b3d91" font-family="Arial, Helvetica, sans-serif">Engineers' Hub</text>
+  <text x="8" y="34" font-size="12" fill="#0b3d91" font-family="Arial, Helvetica, sans-serif">The Great Contractors &amp; Suppliers</text>
+  <text x="8" y="52" font-size="12" fill="#0b3d91" font-family="Arial, Helvetica, sans-serif">Association Of Kenya</text>
   </g>
 </svg>

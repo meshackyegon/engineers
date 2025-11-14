@@ -18,11 +18,11 @@
   <body>
     <header class="py-3 bg-white shadow-sm">
       <div class="container-xxl d-flex align-items-center justify-content-between">
-        <a class="d-flex align-items-center text-decoration-none" href="{{ url('/') }}">
-          <img src="{{ asset('assets/img/illustrations/gsk.jpeg') }}" alt="GSK Logo" style="height:40px;object-fit:contain;" onerror="this.style.display='none'">
+          <a class="d-flex align-items-center text-decoration-none" href="{{ url('/') }}">
+          <img src="{{ asset('assets/img/illustrations/gsk.jpeg') }}" alt="Association Logo" style="height:40px;object-fit:contain;" onerror="this.style.display='none'">
           <div class="ms-2">
-            <h1 class="h5 mb-0 text-primary">Engineers' Hub</h1>
-            <small class="text-muted">Advancing engineering practice together</small>
+            <h1 class="h5 mb-0 text-primary">The Great Contractors and Suppliers Association Of Kenya</h1>
+            <small class="text-muted">Advancing engineering and contracting excellence</small>
           </div>
         </a>
 
@@ -325,7 +325,7 @@
     <footer class="py-4 bg-white border-top">
       <div class="container-xxl d-flex justify-content-between align-items-center">
         <div>
-          <small class="text-muted">© {{ date('Y') }} Engineers' Hub. All rights reserved.</small>
+          <small class="text-muted">© {{ date('Y') }} The Great Contractors and Suppliers Association Of Kenya. All rights reserved.</small>
         </div>
         <div>
           <a href="#" class="text-muted me-3"><i class="bx bxl-facebook"></i></a>

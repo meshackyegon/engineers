@@ -1,0 +1,51 @@
+:root{
+	--color-primary: #0b5ed7; /* deep blue */
+	--color-accent: #ffb703; /* warm accent */
+	--color-muted: #6c757d;
+	--layout-max: 1200px;
+}
+
+html,body{
+	font-family: 'Public Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	color: #222;
+	background: #fff;
+}
+
+/* Header / navbar tweaks to resemble corporate style */
+.layout-navbar, header.navbar, header.site-header{
+	background: #fff !important;
+	box-shadow: 0 2px 8px rgba(13,38,76,0.04);
+}
+.site-header .brand, .app-brand{
+	display:flex;align-items:center;gap:12px;
+}
+.site-header .brand img{height:44px;object-fit:contain}
+
+/* Hero */
+.hero{padding:80px 0;background:linear-gradient(180deg,#f7fbff 0%, #eef6ff 100%);}
+.hero .display-4{color:var(--color-primary);}
+.hero .lead{color:var(--color-muted)}
+
+/* Buttons */
+.btn-primary{background:var(--color-primary);border-color:var(--color-primary);box-shadow:none}
+.btn-primary:hover{background:#094bb2;border-color:#094bb2}
+.btn-outline-secondary{border-color:rgba(13,38,76,0.08);color:var(--color-primary)}
+
+/* Cards & features */
+.feature-icon{width:64px;height:64px;background:rgba(11,94,215,0.06);color:var(--color-primary);border-radius:12px;display:inline-flex;align-items:center;justify-content:center;font-size:28px}
+.card-announce{border-left:4px solid var(--color-primary)}
+
+/* Footer */
+footer{background:#f8f9fb;padding:28px 0;border-top:1px solid rgba(0,0,0,0.04)}
+footer .text-muted{color:var(--color-muted)}
+
+/* Responsive helpers */
+@media (max-width: 768px){
+	.hero{padding:40px 0}
+	.w-px-400{width:100%}
+}
+
+/* Auth pages small fixes */
+.authentication-wrapper.authentication-cover{background:#f6f7fb}
+.authentication-inner .card{border-radius:12px}
+
